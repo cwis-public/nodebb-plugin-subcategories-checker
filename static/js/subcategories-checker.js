@@ -25,13 +25,13 @@
 			});
 		});
 
-		if(!$(".div[widget-area=header] .subcategories-checker-container").length) {
-			$(".div[widget-area=header]").empty().append("<div class='subcategories-checker-container'></div>");
+		if(!$(".subcategories-checker-container").length) {
+			$("div.container#content").prepend("<div class='subcategories-checker-container'></div>");
 		}
-		if(!$(".div[widget-area=header] .subcategories-checker-container .breadcrumb").length) {
+		if(!$(".subcategories-checker-container .breadcrumb").length) {
 			$(".div[widget-area=header] .subcategories-checker-container").append($(".breadcrumb"));
 		}
-		if(!$(".div[widget-area=header] .subcategories-checker-container ul.categories").length) {
+		if(!$(".subcategories-checker-container ul.categories").length) {
 			$(".div[widget-area=header] .subcategories-checker-container").append($("ul.categories"));
 		}
 	};
