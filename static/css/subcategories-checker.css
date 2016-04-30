@@ -60,7 +60,7 @@ body.subcategory-checker ul.categories li[component="categories/category"] .cont
 	font-size: 14px;
 }
 body.subcategory-checker ul.categories li[component="categories/category"] .content h2 br{
-	display: none;
+	display: none !important;
 }
 body.subcategory-checker ul.categories li[component="categories/category"] .content h2 a{
 	display: inline;
