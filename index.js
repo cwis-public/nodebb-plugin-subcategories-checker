@@ -2,16 +2,13 @@
 
 "use strict";
 
-var fs = require("fs");
+var fs = require("fs"),
+	path = require("path");
 
-exports.init = function(custom_routes, callback) {
-	console.log("Adding routes");
+exports.init = function(params, callback) {
 	var templateCategory = fs.readFileSync(path.resolve(__dirname, '../../public/templates/category.tpl'));
 	console.log(templateCategory);
-	templateCategory += "<script> alert('hello'); </script>";
-	console.log(custom_routes);
-	custom_routes.templates.push({ template: "category.tpl", content: templateCategory });
-	return callback(null, custom_routes);
+	return callback();
 };
 
 exports.addScripts = function(scripts, callback) {
