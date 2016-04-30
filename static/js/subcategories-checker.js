@@ -25,7 +25,7 @@
 			});
 		});
 
-		$(document.body).addClass("subcategories-checker");
+		$(document.body).addClass("subcategory-checker");
 		if(!$(".subcategories-checker-container").length) {
 			$("div.category").before("<div class='subcategories-checker-container'></div>");
 		}
@@ -39,12 +39,12 @@
 		var oldPushState = history.pushState;
 		history.pushState = function() {
 			$(".subcategories-checker-container").remove();
-			$(document.body).removeClass("subcategories-checker");
+			$(document.body).removeClass("subcategory-checker");
 			return oldPushState.apply(this, arguments);
 		};
 		window.addEventListener("popstate", function() {
 			$(".subcategories-checker-container").remove();
-			$(document.body).removeClass("subcategories-checker");
+			$(document.body).removeClass("subcategory-checker");
 		});
 
 	};
