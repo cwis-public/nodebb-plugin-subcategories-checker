@@ -27,7 +27,6 @@
 
 		if(!$(".subcategories-checker-container").length) {
 			$("div.container#content").before("<div class='subcategories-checker-container'></div>");
-			$(".subcategories-checker-container").append($("div[widget-area='header']"));
 		}
 		if(!$(".subcategories-checker-container .breadcrumb").length) {
 			$(".subcategories-checker-container").append($(".breadcrumb"));
@@ -46,5 +45,18 @@
 		});
 
 	};
+
+	var observer = new MutationObserver(function(mutations) {
+		mutations.forEach(function(mutation) {
+			for(var i = 0; i < mutation.addedNodes.length; i++) {
+				var addedNode = mutation.addedNodes[i];
+				if(addedNode.nodeName === "DIV" && addedNode.getAttribute("widget-area") === "header") {
+					if($(".subcategories-checker-container").length) {
+						$(".subcategories-checker-container").append($("div[widget-area='header']"));
+					}
+				}
+			}
+		});
+	}).observe(document.body, { attributes: true, childList: true, characterData: true, subtree : true });
 })();
 
