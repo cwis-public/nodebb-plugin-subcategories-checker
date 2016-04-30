@@ -29,10 +29,10 @@
 			$("div.container#content").prepend("<div class='subcategories-checker-container'></div>");
 		}
 		if(!$(".subcategories-checker-container .breadcrumb").length) {
-			$(".div[widget-area=header] .subcategories-checker-container").append($(".breadcrumb"));
+			$(".subcategories-checker-container").append($(".breadcrumb"));
 		}
 		if(!$(".subcategories-checker-container ul.categories").length) {
-			$(".div[widget-area=header] .subcategories-checker-container").append($("ul.categories"));
+			$(".subcategories-checker-container").append($("ul.categories"));
 		}
 	};
 })();
