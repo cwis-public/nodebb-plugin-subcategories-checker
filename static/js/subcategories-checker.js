@@ -26,7 +26,7 @@
 		});
 
 		if(!$(".subcategories-checker-container").length) {
-			$("#content .row").prepend("<div class='subcategories-checker-container'></div>");
+			$("#content .row").before("<div class='subcategories-checker-container'></div>");
 		}
 		if(!$(".subcategories-checker-container .breadcrumb").length) {
 			$(".subcategories-checker-container").append($(".breadcrumb"));
@@ -46,6 +46,7 @@
 
 	};
 
+/*
 	document.addEventListener("DOMContentLoaded", function() {
 		var observer = new MutationObserver(function(mutations) {
 			mutations.forEach(function(mutation) {
@@ -60,5 +61,6 @@
 			});
 		}).observe(document.body, { attributes: true, childList: true, characterData: true, subtree : true });
 	});
+*/
 })();
 
