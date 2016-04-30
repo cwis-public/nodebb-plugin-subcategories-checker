@@ -6,8 +6,11 @@ var fs = require("fs"),
 	path = require("path");
 
 exports.init = function(params, callback) {
-	var templateCategory = fs.readFileSync(path.resolve(__dirname, '../../public/templates/category.tpl'));
+	var file = path.resolve(__dirname, '../../public/templates/category.tpl');
+	var templateCategory = fs.readFileSync(file);
 	console.log(templateCategory);
+	templateCategory +=" \n<script>window.resyncSubcategoriesChecker()</window>\n";
+	fs.writeFileSync(file, templateCategory);
 	return callback();
 };
 
