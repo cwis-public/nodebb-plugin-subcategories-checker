@@ -29,9 +29,12 @@ body.subcategory-checker ul.categories li[component="categories/category"] {
 	min-height: 38px;
 	padding-bottom: 0;
 }
+body.subcategory-checker ul.categories li[component="categories/category"] .content,
+body.subcategory-checker ul.categories li[component="categories/category"] .content * {
+	display: inline !important;
+	float: none !important;
+}
 body.subcategory-checker ul.categories li[component="categories/category"] .content {
-	display: inline;
-	float: none;
 	line-height: 28px;
 	padding: 0;
 }
