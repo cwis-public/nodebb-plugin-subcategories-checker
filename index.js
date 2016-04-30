@@ -4,7 +4,7 @@
 
 var fs = require("fs");
 
-exports.addRoute = function(custom_routes, callback) {
+exports.init = function(custom_routes, callback) {
 	console.log("Adding routes");
 	var templateCategory = fs.readFileSync(path.resolve(__dirname, '../../public/templates/category.tpl'));
 	console.log(templateCategory);

@@ -10,8 +10,8 @@
     },
     "less": [],
     "hooks": [{
-        "hook": "filter:server.create_routes",
-        "method": "addRoute"
+        "hook": "static:app.load",
+        "method": "init"
     }, {
         "hook": "filter:scripts.get",
         "method": "addScripts"
