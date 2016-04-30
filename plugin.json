@@ -8,12 +8,10 @@
     "less": [],
     "hooks": [{
         "hook": "filter:server.create_routes",
-        "method": "addRoute",
-        "callbacked": true
+        "method": "addRoute"
     }, {
         "hook": "filter:scripts.get",
-        "method": "addScripts",
-        "callbacked": false
+        "method": "addScripts"
     }],
     "scripts": {
 	    "css": "./static/css",
