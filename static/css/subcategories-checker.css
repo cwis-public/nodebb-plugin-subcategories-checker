@@ -44,7 +44,7 @@ ul.categories li[component="categories/category"] .content h2{
 ul.categories li[component="categories/category"]:before, ul.categories li[component="categories/category"]:after {
 	display: none;
 }
-.subcategories-checker-container-subcategory-checker {
+.subcategories-checker-subcategory-checkbox {
 	position: absolute;
 	cursor: pointer;
 	top: 12px;

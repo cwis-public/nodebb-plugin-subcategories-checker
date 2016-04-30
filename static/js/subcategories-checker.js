@@ -5,7 +5,7 @@
 		$("ul.categories li[component='categories/category']").each(function() {
 			var cid = $(this).attr("data-cid");
 			var check = $(document.createElement("input"))
-				.addClass("plancha-subcategory-checker")
+				.addClass("subcategories-checker-subcategory-checkbox")
 				.attr("type", "checkbox")
 				.attr("checked", "checked");
 			$(this).prepend(check);
