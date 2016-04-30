@@ -54,3 +54,7 @@ body.subcategory-checker ul.categories li[component="categories/category"]:befor
 	left: 0;
 }
 
+
+div.category {
+	margin-top: 20px;
+}
