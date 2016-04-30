@@ -1,0 +1,53 @@
+.div[widget-area=header] {
+	padding: 0;
+}
+.subcategories-checker-container .breadcrumb {
+	font-size: 19px;
+	margin-bottom: 0;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 0;
+}
+.category > .subcategory p {
+	display: none;
+}
+ul.categories {
+	margin-bottom: 0;
+}
+ul.categories li[component="categories/category"] .stats, ul.categories li[component="categories/category"] .teaser {
+	display:none;
+}
+ul.categories li[component="categories/category"] {
+	border: none;
+	position: relative;
+	padding-left: 18px;
+	margin: 0;
+	margin-right: 13px;
+	display: inline-block;
+}
+ul.categories li[component="categories/category"] .content {
+	display: inline;
+	float: none;
+	line-height: 28px;
+	padding: 0;
+}
+ul.categories li[component="categories/category"] .icon {
+	display: inline-block;
+	/* transform: scale(0.5); */
+	/* transform-origin: 0 0; */
+	zoom: 0.5;
+}
+ul.categories li[component="categories/category"] .content h2{
+	display: inline;
+	margin-left: 0;
+	font-size: 14px;
+}
+ul.categories li[component="categories/category"]:before, ul.categories li[component="categories/category"]:after {
+	display: none;
+}
+.subcategories-checker-container-subcategory-checker {
+	position: absolute;
+	cursor: pointer;
+	top: 12px;
+	left: 0;
+}
+

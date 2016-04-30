@@ -1,0 +1,23 @@
+{
+    "name": "nodebb-plugin-subcategories-checker",
+    "version": "1.0.1",
+    "description": "Show subcategories on top, allow to merge.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cwis-public/nodebb-plugin-subcategories-checker.git"
+    },
+    "author": "Christopher Allene <cwiiss@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cwis-public/nodebb-plugin-subcategories-checker/issues"
+    },
+    "homepage": "https://github.com/cwis-public/nodebb-plugin-subcategories-checker",
+    "nbbpm": {
+        "compatibility": "^1.0.0"
+    }
+
+}

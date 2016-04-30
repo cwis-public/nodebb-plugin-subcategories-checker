@@ -1,0 +1,23 @@
+{
+    "id": "nodebb-plugin-subcategories-checker",
+    "name": "Show subcategories on top",
+    "description": "Show sub-categories on top, with checkboxes that allow to show or hide topics from the sub-categories.",
+    "url": "https://github.com/cwis-public/nodebb-plugin-subcategories-checker",
+    "library": "./index.js",
+    "staticDirs": {},
+    "less": [],
+    "hooks": [{
+        "hook": "filter:server.create_routes",
+        "method": "addRoute",
+        "callbacked": true
+    }, {
+        "hook": "filter:scripts.get",
+        "method": "addScripts",
+        "callbacked": false
+    }],
+    "scripts": [
+	    "css": "./static/css",
+	    "js": "./static/js"
+    ],
+    "acpScripts": []
+}
