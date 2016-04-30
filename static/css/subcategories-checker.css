@@ -27,6 +27,7 @@ body.subcategory-checker ul.categories li[component="categories/category"] {
 	margin-right: 13px;
 	display: inline-block;
 	min-height: 38px;
+	padding-bottom: 0;
 }
 body.subcategory-checker ul.categories li[component="categories/category"] .content {
 	display: inline;
@@ -54,6 +55,10 @@ body.subcategory-checker ul.categories li[component="categories/category"] .cont
 	display: inline;
 	margin-left: 0;
 	font-size: 14px;
+}
+body.subcategory-checker ul.categories li[component="categories/category"] .content h2 a{
+	display: inline;
+	white-space: pre;
 }
 body.subcategory-checker ul.categories li[component="categories/category"]:before,body.subcategory-checker  ul.categories li[component="categories/category"]:after {
 	display: none;
