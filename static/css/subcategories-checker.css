@@ -1,3 +1,9 @@
+.subcategories-checker-container {
+	max-width: 1040px;
+	margin: 0 auto;
+	background: white;
+}
+
 .subcategories-checker-container .breadcrumb {
 	font-size: 19px;
 	margin-bottom: 0;

@@ -27,6 +27,7 @@
 
 		if(!$(".subcategories-checker-container").length) {
 			$("div.container#content").before("<div class='subcategories-checker-container'></div>");
+			$(".subcategories-checker-container").append($("div[widget-area='header']"));
 		}
 		if(!$(".subcategories-checker-container .breadcrumb").length) {
 			$(".subcategories-checker-container").append($(".breadcrumb"));
@@ -34,6 +35,16 @@
 		if(!$(".subcategories-checker-container ul.categories").length) {
 			$(".subcategories-checker-container").append($("ul.categories"));
 		}
+
+		var oldPushState = history.pushState;
+		history.pushState = function() {
+			$(".subcategories-checker-container").remove();
+			return oldPushState.apply(this, arguments);
+		};
+		history.addEventListener("popstate", function() {
+			$(".subcategories-checker-container").remove();
+		});
+
 	};
 })();
 
