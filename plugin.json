@@ -15,9 +15,9 @@
         "method": "addScripts",
         "callbacked": false
     }],
-    "scripts": [
+    "scripts": {
 	    "css": "./static/css",
 	    "js": "./static/js"
-    ],
+    },
     "acpScripts": []
 }
