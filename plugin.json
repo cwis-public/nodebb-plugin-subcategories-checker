@@ -16,9 +16,11 @@
         "hook": "filter:scripts.get",
         "method": "addScripts"
     }],
-    "scripts": {
-        "css": "static/css/subcategories-checker.css",
-        "js": "static/js/subcategories-checker.js"
-    },
+    "css": [
+        "static/css/subcategories-checker.css"
+    ],
+    "scripts": [
+        "static/js/subcategories-checker.js"
+    ],
     "acpScripts": []
 }
