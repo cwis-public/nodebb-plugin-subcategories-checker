@@ -26,7 +26,7 @@
 		});
 
 		if(!$(".subcategories-checker-container").length) {
-			$("div.container#content").before("<div class='subcategories-checker-container'></div>");
+			$("#content .row").before("<div class='subcategories-checker-container'></div>");
 		}
 		if(!$(".subcategories-checker-container .breadcrumb").length) {
 			$(".subcategories-checker-container").append($(".breadcrumb"));
@@ -40,7 +40,7 @@
 			$(".subcategories-checker-container").remove();
 			return oldPushState.apply(this, arguments);
 		};
-		history.addEventListener("popstate", function() {
+		window.addEventListener("popstate", function() {
 			$(".subcategories-checker-container").remove();
 		});
 
