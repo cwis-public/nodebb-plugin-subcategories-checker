@@ -26,7 +26,7 @@
 		});
 
 		if(!$(".subcategories-checker-container").length) {
-			$("#content .row").before("<div class='subcategories-checker-container'></div>");
+			$("#content .row").prepend("<div class='subcategories-checker-container'></div>");
 		}
 		if(!$(".subcategories-checker-container .breadcrumb").length) {
 			$(".subcategories-checker-container").append($(".breadcrumb"));
