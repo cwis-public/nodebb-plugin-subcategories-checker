@@ -77,7 +77,7 @@ body.subcategory-checker ul.categories li[component="categories/category"]:befor
 .subcategories-checker-subcategory-checkbox {
 	position: absolute;
 	cursor: pointer;
-	top: 12px;
+	top: 17px;
 	left: 0;
 }
 
