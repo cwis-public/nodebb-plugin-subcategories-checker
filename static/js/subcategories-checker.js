@@ -29,7 +29,7 @@
 
 			var lsValue = true;
 			try {
-				lsValue = window.localStorage.getItem("subcatcheck_" + cid) === "checked";
+				lsValue = window.localStorage.getItem("subcatcheck_" + cid) !== "unchecked";
 			} catch(e) {
 				lsValue = true;
 			}
