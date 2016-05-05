@@ -51,6 +51,11 @@ body.subcategory-checker ul.categories li[component="categories/category"] .icon
 	min-height: 30px;
 	margin-top: 2px;
 }
+body.subcategory-checker ul.categories li[component="categories/category"] .icon .fa-tree:before {
+	display: inline-block;
+	width: 18px;
+	text-align: center;
+}
 body.subcategory-checker ul.categories li[component="categories/category"] .icon i {
 	width: 23px !important;
 }
