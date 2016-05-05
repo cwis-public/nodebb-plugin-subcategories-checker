@@ -6,8 +6,7 @@
 			var cid = $(this).attr("data-cid");
 			var check = $(document.createElement("input"))
 				.addClass("subcategories-checker-subcategory-checkbox")
-				.attr("type", "checkbox")
-				.attr("checked", "checked");
+				.attr("type", "checkbox");
 			$(this).prepend(check);
 
 			check.change(function() {
@@ -22,7 +21,23 @@
 						}
 					}
 				});
+				try {
+					window.localStorage.setItem("subcatcheck_" + cid, checked? "checked": "unchecked");
+				} catch(e) {
+				}
 			});
+
+			var lsValue = true;
+			try {
+				lsValue = window.localStorage.getItem("subcatcheck_" + cid) === "checked";
+			} catch(e) {
+				lsValue = true;
+			}
+			if(lsValue) {
+				check.attr("checked", "checked");
+			} else {
+				check.change();
+			}
 		});
 
 		$(document.body).addClass("subcategory-checker");
