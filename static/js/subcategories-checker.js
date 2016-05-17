@@ -1,7 +1,7 @@
 /* jshint browser:true */
 /* jshint jquery:true */
 (function(){
-	window.resyncSubcategoriesChecker = function() {
+	var resyncSubcategoriesChecker = function() {
 		$("ul.categories li[component='categories/category']").each(function() {
 			var cid = $(this).attr("data-cid");
 			var check = $(document.createElement("input"))
@@ -50,35 +50,13 @@
 		if(!$(".subcategories-checker-container ul.categories").length) {
 			$(".subcategories-checker-container").append($("ul.categories"));
 		}
-
-		var oldPushState = history.pushState;
-		history.pushState = function() {
-			$(".subcategories-checker-container").remove();
-			$(document.body).removeClass("subcategory-checker");
-			return oldPushState.apply(this, arguments);
-		};
-		window.addEventListener("popstate", function() {
-			$(".subcategories-checker-container").remove();
-			$(document.body).removeClass("subcategory-checker");
-		});
-
 	};
 
-/*
-	document.addEventListener("DOMContentLoaded", function() {
-		var observer = new MutationObserver(function(mutations) {
-			mutations.forEach(function(mutation) {
-				for(var i = 0; i < mutation.addedNodes.length; i++) {
-					var addedNode = mutation.addedNodes[i];
-					if(addedNode.nodeName === "DIV" && addedNode.getAttribute("widget-area") === "header") {
-						if($(".subcategories-checker-container").length) {
-							$(".subcategories-checker-container").append($("div[widget-area='header']"));
-						}
-					}
-				}
-			});
-		}).observe(document.body, { attributes: true, childList: true, characterData: true, subtree : true });
+	$(window).on("action:ajaxify.contentLoaded", function(evt, data){
+		if(!data || data.tpl !== "category") {
+			return;
+		}
+		resyncSubcategoriesChecker();
 	});
-*/
 })();
 
