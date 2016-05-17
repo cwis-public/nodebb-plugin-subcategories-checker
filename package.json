@@ -1,6 +1,6 @@
 {
     "name": "nodebb-plugin-subcategories-checker",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Show subcategories on top, allow to merge.",
     "main": "index.js",
     "scripts": {
